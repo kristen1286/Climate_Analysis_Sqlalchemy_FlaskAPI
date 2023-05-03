@@ -2,7 +2,7 @@
 module 10 repo challenge
 # Holiday Vacation in Honolulu!
 
-![](../images/honolulu.jpg)
+![](surfsup/images/honolulu.jpg)
 
 # Background
 Congratulations! You've decided to treat yourself to a long holiday vacation in Honolulu, Hawaii. 
