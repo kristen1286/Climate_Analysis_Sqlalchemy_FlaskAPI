@@ -109,14 +109,16 @@ def precipitation():
 def station_list():
     session =Session(engine)
 
-    stations = session.query(Station.station, Station.name).all()
+    stations = session.query(Station.station, Station.name, Station.latitude, Station.longitude).all()
     session.close()
     #create a dictionary
     all_stations = []
-    for station, name in stations:
+    for station, name, lat, lon in stations:
         station_dict = {}
         station_dict["station"] = station
         station_dict["name"] = name
+        station_dict["Lat"] = lat
+        station_dict["Lon"] = lon
         all_stations.append(station_dict)
 
     # Return the JSON representation of the list
@@ -127,7 +129,7 @@ def station_list():
 def active_stat():
      session = Session(engine)
 
-#find most recent date ang find date 1 year before
+#find most recent date and find date 1 year before
      recent_date = session.query(Measurement.date).order_by(Measurement.date.desc()).first()[0]
      recent_date = dt.datetime.strptime(recent_date, '%Y-%m-%d')
      year_ago = recent_date - dt.timedelta(days=365)
@@ -138,7 +140,7 @@ def active_stat():
         order_by(func.count(Measurement.station).desc()).all()
      
 #get all the tobs for the mostactive station for the last year   
-     results = session.query(Measurement.tobs).\
+     results = session.query(Measurement.tobs, Measurement.date).\
         filter(Measurement.station == stations_active[0][0]).\
         filter(Measurement.date >= year_ago).all()
      session.close()
