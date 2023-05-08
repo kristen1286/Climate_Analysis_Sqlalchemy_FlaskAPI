@@ -1,7 +1,7 @@
 
 # Holiday Vacation in Honolulu! -Surfs Up (sqlalchemy_challenge)
 
-![](surfsup/images/honolulu.jpg)
+![pic of beach](surfsup/images/honolulu.jpg)
 
 # Background
 Congratulations! You've decided to treat yourself to a long holiday vacation in Honolulu, Hawaii. 
@@ -26,7 +26,7 @@ Specifically, use SQLAlchemy ORM queries, Pandas, and Matplotlib. To do so, comp
 -  Sort the DataFrame values by "date".
 -  Plot the results by using the DataFrame plot method.
 -  Use Pandas to print the summary statistics for the precipitation data.
-
+![plotof precipitation](surfsup/images/precipitation.png)
 ###  Station Analysis
 -  Design a query to calculate the total number of stations in the dataset.
 -  Design a query to find the most-active stations (that is, the stations that have the most rows). To do so, 
