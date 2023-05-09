@@ -23,7 +23,7 @@ Measurement = Base.classes.measurement
 Station = Base.classes.station
 
 # Create our session (link) from Python to the DB
-session = Session(engine)
+session = Session(bind=engine)
 
 #################################################
 # Flask Setup
