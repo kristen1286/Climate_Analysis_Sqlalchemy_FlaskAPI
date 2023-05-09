@@ -40,7 +40,7 @@ Specifically, use SQLAlchemy ORM queries, Pandas, and Matplotlib. To do so, comp
     *  Query the previous 12 months of TOBS data for that station.
     *  Plot the results as a histogram with bins=12
 -  Close your session.
- 
+![tob histogram](surfsup/images/tobs_histogram.png) 
  ---
  
 ## Part 2: Design Your Climate App
