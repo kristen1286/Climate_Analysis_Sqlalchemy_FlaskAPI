@@ -1,5 +1,5 @@
 
-# Holiday Vacation in Honolulu! -Surfs Up (sqlalchemy_challenge)
+# Holiday Vacation in Honolulu! -Surfs Up (sqlalchemy)
 
 ![pic of beach](surfsup/images/honolulu.jpg)
 
